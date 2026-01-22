@@ -11,6 +11,20 @@ HALF_LENGTH=$(((MAX_LENGTH + 1) / 2))
 # Spotify JSON / $INFO comes in malformed, line below sanitizes it
 SPOTIFY_JSON="$INFO"
 
+if [[ -z $SPOTIFY_JSON ]]; then
+    SPOTIFY_JSON=$(osascript -e '
+        if application "Spotify" is running then
+            tell application "Spotify"
+                set playerState to player state as string
+                set trackName to name of current track
+                set trackArtist to artist of current track
+                return "{\"Player State\": \"" & playerState & "\", \"Name\": \"" & trackName & "\", \"Artist\": \"" & trackArtist & "\"}"
+            end tell
+        else
+            return ""
+        end if')
+fi
+
 update_track() {
 
     if [[ -z $SPOTIFY_JSON ]]; then
@@ -19,6 +33,7 @@ update_track() {
     fi
 
     PLAYER_STATE=$(echo "$SPOTIFY_JSON" | jq -r '.["Player State"]')
+    PLAYER_STATE=${(C)PLAYER_STATE}
 
     if [ $PLAYER_STATE = "Playing" ]; then
         TRACK="$(echo "$SPOTIFY_JSON" | jq -r .Name)"
