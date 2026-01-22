@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+if [ -z "$INFO" ]; then
+  INFO=$(lsappinfo info -only name $(lsappinfo front) | sed 's/.*"\(.*\)".*/\1/')
+fi
+
 ICON_PADDING_RIGHT=5
 
 case $INFO in
