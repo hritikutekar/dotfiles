@@ -12,5 +12,8 @@
 !aerospace/
 !aerospace/**
 
+!wezterm/
+!wezterm/**
+
 !README.md
 
