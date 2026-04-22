@@ -17,7 +17,7 @@ exec-on-workspace-change = [
 ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -73,12 +73,12 @@ preset = 'qwerty'
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
-inner.horizontal = 5
-inner.vertical = 5
-outer.left = 5
-outer.bottom = 5
-outer.top = 5
-outer.right = 5
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -106,7 +106,7 @@ outer.right = 5
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut
 # (like in i3)
-alt-enter = 'exec-and-forget /Applications/WezTerm.app/Contents/MacOS/wezterm start'
+alt-enter = 'exec-and-forget ~/.config/aerospace/wezterm-new.sh'
 
 alt-period = 'exec-and-forget /usr/local/bin/zed'
 
@@ -225,3 +225,12 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    check-further-callbacks = true
+    run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = ['move-node-to-workspace S']
