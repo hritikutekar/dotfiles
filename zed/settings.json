@@ -1,0 +1,143 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "language_models": {
+    "openai_compatible": {
+      "Z.ai": {
+        "api_url": "https://api.z.ai/api/coding/paas/v4",
+        "available_models": [
+          {
+            "name": "glm-5.1",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "glm-4.5-air",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true
+            }
+          }
+        ]
+      }
+    }
+  },
+  "agent_servers": {
+    "kimi": {
+      "type": "registry"
+    },
+    "cursor": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "bypassPermissions"
+      },
+      "type": "registry",
+    },
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "show_edit_predictions": false,
+  "ssh_connections": [
+    {
+      "host": "bitbucket.org",
+      "args": [],
+      "projects": [],
+    },
+  ],
+  "pane_split_direction_horizontal": "down",
+  "window_decorations": "client",
+  "use_system_window_tabs": false,
+  "centered_layout": {
+    "right_padding": 0.2,
+    "left_padding": 0.2,
+  },
+  "bottom_dock_layout": "contained",
+  "tab_bar": {
+    "show": true,
+  },
+  "title_bar": {
+    "show_branch_icon": false,
+  },
+  "file_finder": {
+    "file_icons": true,
+  },
+  "agent_ui_font_size": 16.0,
+  "agent": {
+    "tool_permissions": {
+      "tools": {
+        "terminal": {
+          "default": "allow"
+        }
+      }
+    },
+    "default_profile": "write",
+    "default_model": {
+      "provider": "Z.ai",
+      "model": "glm-5.1",
+    },
+    "model_parameters": [],
+    "commit_message_model": {
+      "provider": "ollama",
+      "model": "gpt-oss:120b-cloud",
+    },
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_size": 13.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha",
+  },
+  "theme_overrides": {
+    "Catppuccin Mocha": {
+      "border": "#31324459",
+      "border.variant": "#AC8FD46B",
+      "elevated_surface.background": "#0C0C12FF",
+      "surface.background": "#0C0C12FF",
+      "background": "#0C0C12FF",
+      "status_bar.background": "#0C0C12FF",
+      "title_bar.background": "#0C0C12FF",
+      "toolbar.background": "#0C0C12FF",
+      "tab.inactive_background": "#11111BFF",
+      "tab.active_background": "#0B0B11FF",
+      "panel.background": "#0C0C12FF",
+      "panel.overlay_background": "#0C0C12FF",
+      "editor.background": "#0C0C12FF",
+      "editor.gutter.background": "#0C0C12FF",
+      "editor.subheader.background": "#0C0C12FF",
+      "editor.highlighted_line.background": "#0C0C12FF",
+      "terminal.background": "#0C0C12FF",
+      "panel.overlay_hover": "#0C0C12FF",
+    },
+  },
+}

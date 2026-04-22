@@ -15,5 +15,8 @@
 !wezterm/
 !wezterm/**
 
+!zed/
+!zed/**
+
 !README.md
 
