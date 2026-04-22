@@ -17,6 +17,8 @@
 
 !zed/
 !zed/**
+zed/prompts/
+zed/conversations/
 
 !README.md
 
