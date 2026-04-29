@@ -7,51 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
   "language_models": {
-    "openai_compatible": {
-      "Z.ai": {
-        "api_url": "https://api.z.ai/api/coding/paas/v4",
-        "available_models": [
-          {
-            "name": "glm-5.1",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true
-            }
-          },
-          {
-            "name": "glm-4.5-air",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true
-            }
-          }
-        ]
-      }
-    }
+    "openai_compatible": {},
   },
   "agent_servers": {
     "kimi": {
-      "type": "registry"
+      "type": "registry",
     },
     "cursor": {
-      "type": "registry"
+      "type": "registry",
     },
     "claude-acp": {
       "default_config_options": {
-        "mode": "bypassPermissions"
+        "mode": "bypassPermissions",
       },
       "type": "registry",
     },
@@ -78,31 +58,28 @@
   "tab_bar": {
     "show": true,
   },
-  "title_bar": {
-    "show_branch_icon": false,
-  },
+  "title_bar": {},
   "file_finder": {
     "file_icons": true,
   },
   "agent_ui_font_size": 16.0,
   "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o",
+      "enable_thinking": false,
+    },
+    "sidebar_side": "right",
+    "dock": "right",
     "tool_permissions": {
       "tools": {
         "terminal": {
-          "default": "allow"
-        }
-      }
+          "default": "allow",
+        },
+      },
     },
     "default_profile": "write",
-    "default_model": {
-      "provider": "Z.ai",
-      "model": "glm-5.1",
-    },
     "model_parameters": [],
-    "commit_message_model": {
-      "provider": "ollama",
-      "model": "gpt-oss:120b-cloud",
-    },
   },
   "telemetry": {
     "diagnostics": false,
