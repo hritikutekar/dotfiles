@@ -96,6 +96,7 @@ sketchybar --add item battery right \
 sketchybar -m --add item ram_percentage right \
               --set ram_percentage \
                     icon="" \
+                    icon.color="0xffffffff" \
                     y_offset=0 \
                     update_freq=5 \
                     label.width=32 \
@@ -105,6 +106,7 @@ sketchybar -m --add item ram_percentage right \
 sketchybar -m --add item cpu_percent right \
               --set cpu_percent \
                     icon="" \
+                    icon.color="0xffffffff" \
                     y_offset=0 \
                     update_freq=5 \
                     label.width=32 \
