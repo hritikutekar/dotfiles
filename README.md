@@ -71,11 +71,8 @@ brew install --cask nikitabobko/tap/aerospace
 # Install Neovim
 brew install neovim
 
-# Install SketchyBar and SbarLua (for advanced configuration)
+# Install SketchyBar
 brew install felixkratz/formulae/sketchybar
-curl -L https://github.com/FelixKratz/SbarLua/releases/download/nightly/SbarLua.tgz -o /tmp/SbarLua.tgz
-tar -xzf /tmp/SbarLua.tgz -C /tmp
-mv /tmp/SbarLua.so ~/.config/sketchybar/
 
 # Install WezTerm
 brew install --cask wezterm
