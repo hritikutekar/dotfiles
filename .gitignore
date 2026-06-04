@@ -20,5 +20,9 @@
 zed/prompts/
 zed/conversations/
 
+!tmux/
+!tmux/**
+tmux/plugins/
+
 !README.md
 
