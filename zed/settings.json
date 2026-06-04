@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "new_window",
+  "disable_ai": true,
+  "terminal": {
+    "dock": "right"
+  },
+  "diff_view_style": "split",
   "project_panel": {
     "dock": "left",
   },
@@ -86,7 +92,7 @@
     "metrics": false,
   },
   "vim_mode": true,
-  "icon_theme": "Zed (Default)",
+  "icon_theme": "Material Icon Theme",
   "base_keymap": "VSCode",
   "ui_font_size": 16,
   "buffer_font_size": 13.0,
