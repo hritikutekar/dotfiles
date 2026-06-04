@@ -24,5 +24,8 @@ zed/conversations/
 !tmux/**
 tmux/plugins/
 
+!fastfetch/
+!fastfetch/**
+
 !README.md
 
